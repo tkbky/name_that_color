@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['KY']
   spec.email         = ['infcurious@gmail.com']
 
-  spec.summary       = 'Name that color'
-  spec.description   = 'Name that color'
+  spec.summary       = 'Give color a name'
+  spec.description   = 'Give color a proper name and consolidate similar colors into one to DRY up the color scheme.'
   spec.homepage      = 'https://github.com/tkbky/name_that_color.git'
   spec.license       = 'MIT'
 
@@ -27,12 +27,12 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.bindir        = 'bin'
+  spec.executables   << 'ntc'
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'thor'
-  spec.add_runtime_dependency 'color_diff'
+  spec.add_runtime_dependency 'thor', '0.20.0'
+  spec.add_runtime_dependency 'color_diff', '0.1'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'rake', '~> 10.0'
