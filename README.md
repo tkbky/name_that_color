@@ -1,28 +1,23 @@
 # NameThatColor
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/name_that_color`. To experiment with that code, run `bin/console` for an interactive prompt.
+Give your color a proper name and consolidate similar colors into one to DRY up your color scheme.
 
-TODO: Delete this and the text above, and describe your gem
+Highly inspired from [this work](http://chir.ag/projects/name-that-color/).
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'name_that_color'
+```bash
+$ gem install name_that_color
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install name_that_color
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+# index.scss - Your typical SCSS contains colors that you want to give them some names. Refer spec/fixtures/dummy.scss
+# colors.scss - Your typical SCSS to store colors variables. Refer spec/fixtures/colors.scss
+
+$ ntc replace index.scss colors.scss
+```
 
 ## Development
 
@@ -33,6 +28,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/name_that_color. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## TODOs
+
+* Tests
+* Support directory input
+* Neater implementation
 
 ## License
 
